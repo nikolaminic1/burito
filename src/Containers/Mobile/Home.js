@@ -8,7 +8,7 @@ const HomeMobile = () => {
     <div>
       <SectionMobile1 />
       <SectionMobile2 />
-      <SectionMobile3 />
+      {/* <SectionMobile3 /> */}
     </div>
   );
 };

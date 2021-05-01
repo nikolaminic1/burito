@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import "../../App.css";
+import { Modal } from "antd";
 
 export const SidebarDiv = styled.div`
   display: block;
@@ -15,7 +16,7 @@ export const SidebarDiv = styled.div`
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "100%")};
   left: ${({ isOpen }) => (isOpen ? "0%" : "100%")};
   transition: 0.4s ease-in-out;
-  transition-delay: 0.4s;
+  /* transition-delay: 0.4s; */
 `;
 
 export const Logo = styled.img`
@@ -107,9 +108,9 @@ export const Section1Text = styled.span`
 
 export const LogoLoading = styled.img`
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(50%);
   width: 250px;
 `;
 

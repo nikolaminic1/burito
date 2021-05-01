@@ -2,7 +2,7 @@ export const MenuData = [
   {
     nameOfDish: "Burito1",
     description: "Ukusan burito",
-    image: `../Assets/Burito-slike/1.jpg`,
+    image: `C:/Users/Nikola/Dev/react/andrija_website/src/Assets/Burito-slike/1.jpg`,
   },
   {
     nameOfDish: "Burito2",

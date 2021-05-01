@@ -22,15 +22,15 @@ const MobileLayout = (props) => {
   useEffect(() => {
     if (scrollPosition < pageYOffset) {
       setIsScrolled(isScrolled);
-      console.log(isScrolled);
+      // console.log(isScrolled);
       // need to call function to show scrolling
     } else {
       setIsScrolled(false);
-      console.log(isScrolled);
+      // console.log(isScrolled);
     }
 
     // neeeeee radiiiiiii
-    console.log(pageYOffset);
+    // console.log(pageYOffset);
     setScrollPosition(pageYOffset);
   }, [pageYOffset]);
 

@@ -39,7 +39,7 @@ const MenuImageSlider = () => {
                 <div>
                   <h4>{slide.nameOfDish}</h4>
                   <h5>{slide.description}</h5>
-                  <img alt="burito" class="burito-img" src={slide.image}></img>
+                  <img alt="burito" class="burito-img" src={slide.image} />
                 </div>
               )}
             </div>

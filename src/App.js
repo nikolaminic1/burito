@@ -13,13 +13,14 @@ import Layout from "./Layout/Layout";
 import Kontakt from "./Containers/Mobile/Kontakt";
 import ONama from "./Containers/Mobile/ONama";
 import Meni from "./Containers/Mobile/Meni";
+import "antd/dist/antd.css";
 
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 500);
   }, []);
 
   if (loading === true) {

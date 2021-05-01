@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ImageSection1,
   MainDivSection1,
@@ -6,6 +6,8 @@ import {
   Section1Text,
   Section1TextDiv,
 } from "../../Style/MobileComponents/Style";
+import { Modal, Button } from "antd";
+
 import imageSection1src from "../../Assets/imagesection1.jpg";
 import { TimelineMax } from "gsap/gsap-core";
 import { useEffect } from "react";
@@ -25,6 +27,45 @@ const SectionMobile1 = () => {
     });
   }, []);
 
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [emailValue, setEmailValue] = useState({
+    email: "",
+  });
+
+  const { email } = emailValue;
+
+  const onChange = (e) => {
+    setEmailValue({ ...emailValue, [e.target.name]: e.target.value });
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(emailValue.email);
+    setIsModalVisible(false);
+  };
+
+  const showModal = () => {
+    console.log("asdasd");
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      console.log("Newsletter");
+      setIsModalVisible(true);
+    }, 1000);
+  }, []);
+
+  const modalStyle = {};
+
   return (
     <div>
       <MainDivSection1>
@@ -35,6 +76,25 @@ const SectionMobile1 = () => {
           </Section1Text>
         </Section1TextDiv>
       </MainDivSection1>
+
+      <Modal
+        bodyStyle={modalStyle}
+        maskClosable={false}
+        closable={true}
+        title="Basic Modal"
+        visible={isModalVisible}
+        onOk={(e) => onSubmit(e)}
+        onCancel={handleCancel}
+      >
+        <h3>Enter email adress</h3>
+        <input
+          type="text"
+          placeholder="enter email"
+          name="email"
+          value={email}
+          onChange={(e) => onChange(e)}
+        />
+      </Modal>
     </div>
   );
 };

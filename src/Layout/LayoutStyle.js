@@ -12,7 +12,7 @@ export const LogoImg = styled.img`
 `;
 
 export const HeaderDiv = styled.div`
-  background: ${({ isOpen }) => (isOpen ? "#F3DC0B" : "#F3DC0B")};
+  background: ${({ isOpen }) => (isOpen ? "#F3DC0B" : "transparent")};
   display: flex;
   position: fixed;
   z-index: 10;

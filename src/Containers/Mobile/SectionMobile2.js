@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   MainDivSection2,
   StoneImage,
@@ -9,6 +9,8 @@ import stoneImage from "../../Assets/blackstoneimage.jpg";
 import MenuImageSlider from "./MenuImageSlider";
 
 const SectionMobile2 = () => {
+  useEffect(() => {});
+
   return (
     <MainDivSection2>
       <StoneImage src={stoneImage} />
